@@ -1,0 +1,382 @@
+var casestudy =[
+  {
+    "clientname":"Canon",
+    "ref":"city_surfer",
+    "campaignName":"City surfer",
+    "Tagline": "Hi impact Youtube masthead",
+    "Services":"",
+    "industry":"",
+    "dateOfCampaign":"",
+    "Title":"dkhj fdblkfb",
+    "description": "Occaecat dolor et nisi voluptate mollit cupidatat velit cillum consectetur cupidatat ex dolor mollit. Laboris id cupidatat aliqua Lorem ut ut fugiat in excepteur enim officia et cupidatat. Quis labore enim elit magna Lorem fugiat velit aliquip officia minim occaecat nisi. Voluptate consequat excepteur excepteur officia qui qui magna esse amet irure reprehenderit eu veniam et nisi culpa dolor. Esse excepteur ea commodo veniam irure occaecat aute proident aute esse aliqua pariatur proident. Cillum do nostrud minim occaecat qui deserunt id.",
+    "mainImage":"....",
+    "image1":"",
+    "image2":"",
+    "image3":"",
+    "subsection":[
+      {
+        "heading":"",
+        "subDescription":"",
+        "image":"",
+        "colorCode":"",
+      },
+      {
+        "heading":"",
+        "subDescription":"",
+        "image":"",
+        "colorCode":"",
+      }
+    ],
+    "url":"gotopreviewlink.com",
+    "filterOptions":{
+      "Banners":true,
+      "DOOH":false,
+      "Videos":true,
+      "Web":false,
+      "High_volume":false,
+      "High_creative_impact":true,
+      "StandardBanners":false,
+      "DynamicBanners":false,
+      "ExpandableBanners":false,
+      "VideoBanners":true,
+      "CMS":false,
+    }
+  }
+];
+
+$('.layoutSelectors').css('display', 'block');
+$('.layoutSelectors').css('position', 'absolute');
+$('.layoutSelectors').css('top', '1em');
+$('.layoutSelectors').css('right', '1em');
+$('.layoutSelectors').css('z-index', '5');
+$('.layoutSelectors').css('width', '40px');
+$('.layoutSelectors').css('height', '40px');
+
+$('.layoutSelectors').find('span').css('width', '100%');
+$('.layoutSelectors').find('span').css('background', 'orange');
+$('.layoutSelectors').find('span').css('display', 'block');
+$('.layoutSelectors').find('span').css('height', '5px');
+$('.layoutSelectors').find('span').css('margin', '12px 0');
+$('.layoutSelectors').find('span').css('border-radius', '4px');
+$('.layoutSelectors span:first-of-type').css('margin-top', '3px');
+$('.layoutSelectors').find('span').css('position', 'relative');
+$('.layoutSelectors').find('span').css('box-shadow', '1px 2px 3px #333');
+
+$('.layoutSelectors').find('i').css('position', 'absolute');
+$('.layoutSelectors').find('i').css('display', 'block');
+$('.layoutSelectors').find('i').css('background', 'orange');
+$('.layoutSelectors').find('i').css('width', '12px');
+$('.layoutSelectors').find('i').css('border', '1px solid orange');
+$('.layoutSelectors').find('i').css('height', '12px');
+$('.layoutSelectors').find('i').css('border-radius', '12px');
+$('.layoutSelectors').find('i').css('top', '-3px');
+$('.layoutSelectors').find('i').css('z-index', '2');
+
+wellcom.digital@wellcomww.co.uk
+password: Digital-WELL7
+
+
+<div class="container-fluid slide fullHeight">
+  <div class="intro row">
+    <div>
+      <h1 class="display">Lucky Generals</h1>
+      <h2 class="subhead">Amazon Echo</h2>
+      <p class="copyAlt">Short description</p>
+    </div>
+  </div>
+</div>
+<div class="container-fluid slide fullHeight ">
+  <div class="description row">
+    <div class="overview col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+      <h2><span class="highlight">Project</span> Preview</h2>
+      <p class="copyAlt">Veniam cillum excepteur nostrud elit incididunt est est incididunt esse amet qui nulla ipsum fugiat cillum proident irure. Occaecat duis excepteur et minim excepteur sunt irure velit fugiat et esse non exercitation dolore. Qui ullamco reprehenderit dolor veniam dolor eu veniam duis non quis irure consequat. Reprehenderit duis exercitation quis laboris nulla laborum excepteur tempor minim adipisicing et sint dolor. Tempor ut ex labore consectetur do incididunt elit. Velit voluptate consectetur nulla id mollit nisi occaecat magna velit ea in culpa amet ipsum duis sint deserunt.</p>
+    </div>
+  </div>
+</div>
+<div class="container-fluid slide fullHeight">
+  <div class="preview row">
+    <div>
+      <div class="deviceImgPreview"></div>
+      <div class="cta">
+        <p><a href="#">View Campaign banners</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--    <script type="text/x-template" id="myData">
+      <div>
+        {company} Employees:
+        {#employees prefix="Name"}
+        <div class="container">
+          <div>{prefix}:{name}</div>
+          <div>{phone}</div>
+          <div>{email}</div>
+          <div>{title}</div>
+          {@select key="{fulltime}"
+          {@eq value="true"}
+          <div>Full-time Employee</div>
+          {:else}
+          <div></div>
+          {/eq}
+          {/select}
+          <div>
+            {#skills}
+            <span>{.}{@sep}, {/sep}</span>
+            {/skills}
+          </div>
+        </div>
+
+        {/employees}
+      </div>
+    </script>-->
+
+
+
+
+
+
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <title>Wellcom Digital credentials - Case study</title>
+        <!--build:css css/stylesheet.min.js -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="../css/styles.css">
+        <!--<link rel="stylesheet" href="../css/bootstrap.css">-->
+        <!-- endbuild -->
+        <script type="text/javascript" src="../js/lib/jquery.min.js"></script>
+        <script type="text/javascript" src="../js/lib/dust-full.js"></script>
+        <script type="text/javascript" src="../js/lib/dust-helpers.js"></script>
+
+
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+          ga('create', 'UA-96014574-1', 'auto');
+          ga('send', 'pageview');
+
+
+        </script>
+      </head>
+      <body class="landing dark">
+        <header class="header"></header>
+
+
+
+
+
+        <div class="page">
+          <div class="container" id="container"></div>
+          <div class="container" id="myData"></div>
+      </div>
+
+        <div class="ctrls"></div>
+
+
+        <script type="text/x-template">
+          {#cases}
+            <div class="pageBg">
+              <img src="/images/digital/{bgImage}" alt="{client} {campaign}">
+            </div>
+            <div class="container-fluid slide fullHeight">
+              <div class="intro row">
+                <div>
+                  <h1 class="display">{client}</h1>
+                  <h2 class="subhead">{campaign}</h2>
+                  <p class="copyAlt">{description}</p>
+                </div>
+              </div>
+            </div>
+            <div class="container-fluid slide fullHeight ">
+              <div class="description row">
+                <div class="overview col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+                  <h2><span class="highlight">Project</span> Preview</h2>
+                  <p class="copyAlt">{description}</p>
+                </div>
+              </div>
+            </div>
+            <div class="container-fluid slide fullHeight">
+              <div class="preview row">
+                <div>
+                  <div class="deviceImgPreview"></div>
+                  <div class="cta">
+                    <p><a href="../banners/BASF/we-create-chemistry/mpu">View Campaign banners</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container-fluid slide fullHeight">
+              <div class="driver row">
+                  <div class="panel dark noBg col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+                    <h2>Contact us</h2>
+                    <p class="copyAlt">Commodo esse in Lorem esse est dolor sit reprehenderit ex officia anim nulla irure veniam. Minim nisi exercitation magna officia laboris dolore officia. </p>
+                    <div class="">
+                      <p><a href="#">Let's talk</a></p>
+                    </div>
+                  </div>
+                  <div class="panel light col-xs-12">
+                    <div class="">
+                      <p><a href="#">View more case studies</a></p>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          {/cases}
+
+        </script>
+        <!--build:js js/scripts.min.js -->
+          <!--<script src="../js/lib/jquery.min.js"></script>-->
+          <script src="../js/lib/bootstrap.min.js"></script>
+          <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+          <script src="../js/scripts.js"></script>
+          <script type="text/javascript">
+            initCaseStudies();
+
+            function renderTmplts(){
+              $.getJSON('../js/data.json',function(data){
+                var tlcont = document.getElementById('myData').innerHTML;
+                var dataTemplate = dust.compile(tlcont, 'myTmpl');
+                dust.loadSource(dataTemplate);
+                dust.render('myTmpl', data, function(err, res){
+                  document.getElementById('container').innerHTML = res;
+                });
+              });
+
+            }
+            window.addEventListener('load', renderTmplts);
+          </script>
+          <!--endbuild-->
+      </body>
+    </html>
+
+
+
+
+
+    {
+      "id":"2",
+      "client":"BASF",
+      "ref":"basf_WeCreateChemistry",
+      "campaign_ref":"WeCreateChemistry",
+      "campaign":"We create chemistry",
+      "tagline":"High volume digital banner production",
+      "bgImage":"BASF_WCCBanners.jpg",
+      "shortDesc":"",
+      "hex":"",
+      "services":"",
+      "keywords":"",
+      "description":"Duis exercitation fugiat do laborum aliqua esse commodo cillum. Quis fugiat laborum sunt dolore exercitation est cupidatat sit eu reprehenderit nostrud tempor velit nostrud ullamco amet. In nulla officia commodo laborum amet sunt tempor. Deserunt reprehenderit anim enim in sint nisi qui est sint non anim laborum. Ea laborum elit eiusmod labore anim laborum tempor occaecat magna eiusmod culpa commodo dolore et aute.",
+      "Banners":true,
+      "DOOH":false,
+      "Videos":true,
+      "Web":false,
+      "High_volume":false,
+      "High_creative_impact":true,
+      "StandardBanners":false,
+      "DynamicBanners":false,
+      "ExpandableBanners":false,
+      "VideoBanners":true,
+      "CMS":false,
+      "previews":[
+        {
+          "type":"banner",
+          "size":"MPU",
+          "compatibility":["mobile"]
+        },
+        {
+          "type":"banner",
+          "size":"Leaderboard",
+          "compatibility":["desktop", "tablet"]
+        },
+        {
+          "type":"banner",
+          "size":"skyscraper",
+          "compatibility":["tablet", "desktop"]
+        }
+      ],
+      "section":[
+
+      ]
+    }
+
+
+
+    <!--
+            <div class="tile col-xs-12 col-sm-6">
+              <a href="#" class="row">
+                <img src="../images/digital/Canon_CitySurfersYT.jpg" alt="">
+                <div class="caption overlay">
+                  <h3>Canon</h3>
+                  <p class="subhead">City Surfers - Youtube</p>
+                  <span class="glyphicon glyphicon-chevron-right"></span>
+                </div>
+              </a>
+            </div>
+
+            <div class="tile col-xs-12 col-sm-6">
+              <a href="#" class="row">
+                <img src="../images/digital/Innocean_HyundaiSantaFe.jpg" alt="">
+                <div class="caption overlay">
+                  <h3>Innocean</h3>
+                  <p class="subhead">Hyundai - Santa Fe</p>
+                  <span class="glyphicon glyphicon-chevron-right"></span>
+                </div>
+              </a>
+            </div>
+            <div class="tile col-xs-12 col-sm-6">
+              <a href="#" class="row">
+                <img src="../images/digital/DKNY_Dynamic.jpg" alt="">
+                <div class="caption overlay">
+                  <h3>DKNY</h3>
+                  <p class="subhead">Dynamic OLA</p>
+                  <span class="glyphicon glyphicon-chevron-right"></span>
+                </div>
+              </a>
+            </div>
+            <div class="tile col-xs-12 col-sm-6">
+              <a href="#" class="row">
+                <img src="../images/digital/TMW_Bertolli.jpg" alt="">
+                <div class="caption overlay">
+                  <h3>TMW</h3>
+                  <p class="subhead">Bertolli - Bertolli with butter</p>
+                  <span class="glyphicon glyphicon-chevron-right"></span>
+                </div>
+              </a>
+            </div>
+            <div class="tile col-xs-12 col-sm-6">
+              <a href="#" class="row">
+                <img src="../images/digital/LG_Impact.jpg" alt="">
+                <div class="caption overlay">
+                  <h3>Lucky Generals</h3>
+                  <p class="subhead">D&AD Impact - submissions</p>
+                  <span class="glyphicon glyphicon-chevron-right"></span>
+                </div>
+              </a>
+            </div>
+            <div class="tile col-xs-12 col-sm-6">
+              <a href="#" class="row">
+                <img src="../images/digital/LG_AmazonEcho.jpg" alt="">
+                <div class="caption overlay">
+                  <h3>Lucky Generals</h3>
+                  <p class="subhead">Amazon - Amazon echo</p>
+                  <span class="glyphicon glyphicon-chevron-right"></span>
+                </div>
+              </a>
+            </div>
+          -->
+
+
+          #AmazonEcho:before {
+            background-image: url(/images/digital/LG_AmazonEcho.jpg);
+            background-size:cover;
+            background-repeat:no-repeat;
+            background-repeat:none;
+            position:fixed;
+            content:'';
+            display: block;
+          }

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Wellcom Digital credentials - Case listing</title>
+    <!--build:css css/stylesheet.min.js -->
+      <!--<link rel="stylesheet" type="text/css" href="../js/lib/jquery.fullPage.css" />
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+      <link rel="stylesheet" href="../css/bootstrap.css">-->
+      <link rel="stylesheet" href="../css/bootstrap.css">
+      <link rel="stylesheet" href="../css/styles.css">
+      <script type="text/javascript" src="../js/lib/jquery.min.js"></script>
+      <script type="text/javascript" src="../js/lib/fullpage.js"></script>
+      <script type="text/javascript" src="../js/lib/dust-full.js"></script>
+      <script type="text/javascript" src="../js/lib/dust-helpers.js"></script>
+
+    <!-- endbuild -->
+
+  </head>
+  <body class="landing dark">
+    <header class="header"></header>
+    <nav class="filterWrapper">
+      <div class="filter">
+        <h2>Digital</h2>
+        <div class="selectOptionGroup">
+          <p><span></span>Show all case studies</p>
+        </div>
+        <div class="selectOptionGroup">
+          <p><span></span>Select filter below</p>
+          <div>
+            <div class="selectOption">
+              <p><span></span>Media Types:</p>
+              <div class="filterOptions">
+                <a href="#" class="col-xs-12"> Banners</a>
+                <a href="#" class="col-xs-12"> DOOH</a>
+                <a href="#" class="col-xs-12"> Videos</a>
+                <a href="#" class="col-xs-12"> Web</a>
+              </div>
+            </div>
+            <div class="selectOption">
+              <p><span></span>Volume:</p>
+              <div class="filterOptions">
+                <a href="#" class="col-xs-12"> High Volume</a>
+                <a href="#" class="col-xs-12"> High Creative Impact</a>
+              </div>
+            </div>
+            <div class="selectOption">
+              <p><span></span>Features:</p>
+              <div class="filterOptions">
+                <a href="#" class="col-xs-12"> Standard banners</a>
+                <a href="#" class="col-xs-12"> Dynamic banners</a>
+                <a href="#" class="col-xs-12"> Expandable banners</a>
+                <a href="#" class="col-xs-12"> Video Banners</a>
+                <a href="#" class="col-xs-12">CMS</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid page" id="container"></div>
+    <div class="container-fluid page hidden" id="casestudy"></div>
+    <div class="triggers"></div>
+    <div class="ctrls hidden"></div>
+
+    <script type="text/x-template" id="clients">
+      <div class="tiles row">
+        {#cases}
+          <div class="tile col-xs-12 col-sm-6 {client}">
+            <a href="#{client}" class="row cs_trg" id="{campaign_ref}_trg">
+              <img src="../images/digital/{bgImage}" alt="{client} {campaign_ref}">
+              <div class="caption overlay">
+                <h3>{client}</h3>
+                <p class="subhead">{campaign}</p>
+                <span class="glyphicon glyphicon-chevron-right"></span>
+              </div>
+            </a>
+          </div>
+        {/cases}
+      </div>
+    </script>
+
+
+    <script type="text/x-template" id="casestudies">
+        {#cases}
+          <div class="study" id="{campaign_ref}">
+            <div class="pageBg" title="{client}">
+              <img src="/images/digital/{bgImage}">
+            </div>
+            <div class="hidden"></div>
+            <div class="slides section fullHeight">
+              <div class="intro row section">
+                <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+                  <h1 class="display">{client}</h1>
+                  <h2 class="subhead">{campaign}</h2>
+                  <p class="copyAlt">{tagline}</p>
+                </div>
+              </div>
+            </div>
+            <div class="slides section fullHeight">
+              <div class="description row section">
+                <div class="overview col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+                  <h2><span class="highlight">Project</span> Preview</h2>
+                  <p class="copyAlt">{description}</p>
+                </div>
+              </div>
+            </div>
+            <div class="slides section fullHeight">
+              <div class="preview row section">
+                <div>
+                  <div class="deviceImgPreview"></div>
+                  <div class="cta">
+                    <p><a href="../banners/{client}/{campaign}/">View Campaign banners</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slides section fullHeight">
+              <div class="driver section">
+                  <div class="panel dark noBg col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+                    <h2>Contact us</h2>
+                    <p class="copyAlt">Do you want to grab your customer's attention with a high-impact creative campaign? Contact us now to find out how we can help.  </p>
+                    <div class="">
+                      <p><a href="../contact-us/">Contact us</a></p>
+                    </div>
+                  </div>
+                  <div class="panel light bottom col-xs-12">
+                    <div class="">
+                      <p><a href="#">View more case studies</a></p>
+                    </div>
+                  </div>
+              </div>
+            </div>
+
+          </div>
+        {/cases}
+    </script>
+    <!--build:js js/scripts.min.js -->
+    <script src="../js/lib/bootstrap.min.js"></script>
+    <script src="../js/scripts.js"></script>
+
+    <script type="text/javascript">
+      initFilter();
+    </script>
+    <!--endbuild-->
+    <script type="text/javascript">
+
+    $(window).load(function(){
+      renderCaseStudies();
+      renderCaseListing();
+      setTimeout(function(){
+        setTileAttributes();
+        initCaseStudies();
+        setListeners();
+        $(document).ready(function() {
+          $('#casestudy > div').fullpage();
+        });
+
+      }, 2000);
+    });
+
+
+    function renderCaseListing(){
+      $.getJSON('../js/data.json',function(data){
+        var tlcont = document.getElementById('clients').innerHTML;
+        var dataTemplate = dust.compile(tlcont, 'myTmpl');
+        dust.loadSource(dataTemplate);
+        dust.render('myTmpl', data, function(err, res){
+          document.getElementById('container').innerHTML = res;
+        });
+      });
+    }
+
+    function renderCaseStudies(){
+      $.getJSON('../js/data.json',function(data){
+        var tlcont2 = document.getElementById('casestudies').innerHTML;
+        var dataTemplate = dust.compile(tlcont2, 'myTmpl');
+        dust.loadSource(dataTemplate);
+        dust.render('myTmpl', data, function(err, res){
+          document.getElementById('casestudy').innerHTML = res;
+        });
+      });
+    }
+
+    function initCaseStudies(){
+      var imgSrc = $('.pageBg > img').attr('src');
+      var myImg = $('.pageBg > img');
+      var wheight = $(window).height();
+      var wwidth = $(window).width();
+
+      function setSlideBg(){
+        $('#casestudy').css('height', wheight);
+        $('#casestudy').css('padding', '0');
+
+        //$(myImg).parent().css({'background-image': 'url('+imgSrc+')'});
+        $(myImg).parent().css('background-size', 'cover');
+        $(myImg).parent().css('background-repeat', 'no-repeat');
+        $(myImg).parent().css('background-repeat', 'none');
+        $(myImg).parent().css('position', 'fixed');
+        $('.pageBg').parent().css('background-repeat', 'none');
+        $('.pageBg').css('background-repeat', 'no-repeat');
+        $('.pageBg').css('height', wheight);
+        $('.pageBg').css('width', '100%');
+        $('.pageBg').css('background-position', '50% 0px');
+        $('.fullHeight > div').css('height', wheight);
+        $(myImg).remove();
+      }
+      setSlideBg();
+      $(window).resize(function(){
+        setSlideBg();
+      });
+    }
+
+
+    function setListeners(){
+      addListeners();
+      function addListeners(){
+        var citySurfersBtn = document.getElementById('CitySurfersYT_trg');
+        var hyundaiSantaFeyBtn = document.getElementById('HyundaiSantaFey_trg');
+        var amazonEchoBtn = document.getElementById('AmazonEcho_trg');
+        var weCreateChemistryBtn = document.getElementById('WeCreateChemistry_trg');
+
+        var citySurfersPg = document.getElementById('CitySurfersYT');
+        var hyundaiSantaFeyPg = document.getElementById('HyundaiSantaFey');
+        var amazonEchoPg = document.getElementById('AmazonEcho');
+        var weCreateChemistryPg = document.getElementById('WeCreateChemistry');
+
+        function citySurferHandler(){
+          $('#CitySurfersYT').addClass('active');
+          $('#casestudy').removeClass('hidden');
+          $('.ctrls').removeClass('hidden');
+          $('#CitySurfersYT').siblings().removeClass('active');
+          console.log('Open City surfers');
+        }
+
+        function hyundaiHandler(){
+          $('#HyundaiSantaFey').addClass('active');
+          $('#casestudy').removeClass('hidden');
+          $('.ctrls').removeClass('hidden');
+          $('#HyundaiSantaFey').siblings().removeClass('active');
+          console.log('Open Santa fe');
+        }
+
+        function echoHandler(){
+          $('#AmazonEcho').addClass('active');
+          $('#casestudy').removeClass('hidden');
+          $('.ctrls').removeClass('hidden');
+          $('#AmazonEcho').siblings().removeClass('active');
+          console.log('Open Amazon Echo');
+        }
+
+        function basfHandler(){
+          $('#WeCreateChemistry').addClass('active');
+          $('#casestudy').removeClass('hidden');
+          $('.ctrls').removeClass('hidden');
+          $('#WeCreateChemistry').siblings().removeClass('active');
+          console.log('Open BASF');
+        }
+
+        citySurfersBtn.addEventListener('click', citySurferHandler, false);
+        hyundaiSantaFeyBtn.addEventListener('click', hyundaiHandler, false);
+        amazonEchoBtn.addEventListener('click', echoHandler, false);
+        weCreateChemistryBtn.addEventListener('click', basfHandler, false);
+      }
+    }
+
+
+
+
+    </script>
+  </body>
+</html>

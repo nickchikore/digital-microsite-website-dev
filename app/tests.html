@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <script type="text/x-template" id="myData">
+      <div>
+        {company} Employees:
+        {#employees prefix="Name"}
+        <div class="container">
+          <div>{prefix}:{name}</div>
+          <div>{phone}</div>
+          <div>{email}</div>
+          <div>{title}</div>
+          {@select key="{fulltime}"}
+          {@eq value="true"}
+          <div>Full-time Employee</div>
+          {:else}
+          <div></div>
+          {/eq}
+          {/select}
+          <div>
+            {#skills}
+            <span>{.}{@sep}, {/sep}</span>
+            {/skills}
+          </div>
+        </div>
+
+        {/employees}
+      </div>
+    </script>
+    <script type="text/javascript" src="../js/lib/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/lib/dust-full.js"></script>
+    <script type="text/javascript" src="../js/lib/dust-helpers.js"></script>
+
+    <div class="container" id="container"></div>
+    <div class="container" id="myData"></div>
+
+    <script type="text/javascript">
+      function renderTmplts(){
+        $.getJSON('../js/data.json',function(data){
+          var tlcont = document.getElementById('myData').innerHTML;
+          var dataTemplate = dust.compile(tlcont, 'myTmpl');
+
+          dust.loadSource(dataTemplate);
+
+          dust.render('myTmpl', data, function(err, res){
+            document.getElementById('container').innerHTML = res;
+          });
+        });
+
+      }
+      window.addEventListener('load', renderTmplts);
+    </script>
+    <!--build:js js/scripts.min.js -->
+      <script src="../js/lib/jquery.min.js"></script>
+      <script src="../js/lib/bootstrap.min.js"></script>
+      <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+      <script src="../js/scripts.js"></script>
+  </body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <script type="text/x-template" id="myData">
+      <div>
+        {company} Employees:
+        {#employees prefix="Name"}
+        <div class="container">
+          <div>{prefix}:{name}</div>
+          <div>{phone}</div>
+          <div>{email}</div>
+          <div>{title}</div>
+          {@select key="{fulltime}"}
+          {@eq value="true"}
+          <div>Full-time Employee</div>
+          {:else}
+          <div></div>
+          {/eq}
+          {/select}
+          <div>
+            {#skills}
+            <span>{.}{@sep}, {/sep}</span>
+            {/skills}
+          </div>
+        </div>
+
+        {/employees}
+      </div>
+    </script>
+    <script type="text/javascript" src="../js/lib/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/lib/dust-full.js"></script>
+    <script type="text/javascript" src="../js/lib/dust-helpers.js"></script>
+
+    <div class="container" id="container"></div>
+    <div class="container" id="myData"></div>
+
+    <script type="text/javascript">
+      function renderTmplts(){
+        $.getJSON('../js/data.json',function(data){
+          var tlcont = document.getElementById('myData').innerHTML;
+          var dataTemplate = dust.compile(tlcont, 'myTmpl');
+
+          dust.loadSource(dataTemplate);
+
+          dust.render('myTmpl', data, function(err, res){
+            document.getElementById('container').innerHTML = res;
+          });
+        });
+
+      }
+      window.addEventListener('load', renderTmplts);
+    </script>
+    <!--build:js js/scripts.min.js -->
+      <script src="../js/lib/jquery.min.js"></script>
+      <script src="../js/lib/bootstrap.min.js"></script>
+      <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+      <script src="../js/scripts.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+<script type="text/x-template" id="myData">
+  {#cases}
+    <div class="pageBg">
+      <img src="/images/digital/{bgImage}" alt="{client}">
+    </div>
+    <div class="container-fluid slide fullHeight">
+      <div class="intro row">
+        <div>
+          <h1 class="display">{client}</h1>
+          <h2 class="subhead">{campaign}</h2>
+          <p class="copyAlt">{description}</p>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid slide fullHeight ">
+      <div class="description row">
+        <div class="overview col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+          <h2><span class="highlight">Project</span> Preview</h2>
+          <p class="copyAlt">{description}</p>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid slide fullHeight">
+      <div class="preview row">
+        <div>
+          <div class="deviceImgPreview"></div>
+          <div class="cta">
+            <p><a href="../banners/BASF/we-create-chemistry/mpu">View Campaign banners</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid slide fullHeight">
+      <div class="driver row">
+          <div class="panel dark noBg col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+            <h2>Contact us</h2>
+            <p class="copyAlt">Commodo esse in Lorem esse est dolor sit reprehenderit ex officia anim nulla irure veniam. Minim nisi exercitation magna officia laboris dolore officia. </p>
+            <div class="">
+              <p><a href="#">Let's talk</a></p>
+            </div>
+          </div>
+          <div class="panel light col-xs-12">
+            <div class="">
+              <p><a href="#">View more case studies</a></p>
+            </div>
+          </div>
+      </div>
+    </div>
+  {/cases}
+
+</script>

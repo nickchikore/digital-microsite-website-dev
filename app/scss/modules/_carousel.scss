@@ -1,0 +1,29 @@
+.item{
+  .carousel-inner > &{
+    //-webkit-transition: -webkit-transform 1000ms ease-in-out;
+    //transition: transform 1000ms ease-in-out;
+  }
+  &.fullheight {
+    background-size: cover;
+    &:before {
+      content:'';
+      display:block;
+      position:absolute;
+      top:0;
+      bottom:0;
+      right:0;
+      left:0;
+      background:rgba(1,1,1,.5);
+    }
+  }
+  .carousel-caption {
+    position: absolute;
+    transform: translateY(50%);
+    height: auto;
+    bottom: 50%;
+    display: block;
+    max-width: 600px;
+    margin: auto;
+    padding: 0;
+  }
+}

@@ -1,0 +1,47 @@
+.overlay {
+    background: rgba(2, 2, 2, 0.75);
+    padding: 1em;
+
+}
+
+
+.tiles {
+  overflow: hidden;
+  a {
+    overflow: hidden;
+    display: block;
+    position: relative;
+  }
+  .tile{
+    overflow: hidden;
+    .overlay{
+      position: absolute;
+      width:100%;
+      bottom:0;
+      p {
+        margin-bottom: 0;
+      }
+      span{
+        position: absolute;
+        right: .1em;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size:1.5em;
+      }
+    }
+    &:hover .cs_trg,
+    &:focus .cs_trg {
+      transform: scale(1.03);
+      transition: 2000ms transform linear;
+      transition-delay:100ms;
+    }
+    &:hover .cs_trg .caption{
+      transform: scale(.98);
+      transition: 2000ms transform linear;
+      transition-delay:200ms;
+    }
+    a{
+      transition: 2000ms transform linear;
+    }
+  }
+}

@@ -1,0 +1,220 @@
+  {
+    "company":"Wellcom Worldwide",
+    "department":"digital",
+    "cases":[
+      {
+        "id":"1",
+        "client":"Canon",
+        "ref":"Canon_CitySurfersYT",
+        "campaign_ref":"CitySurfersYT",
+        "campaign":"City Surfers - Youtube",
+        "tagline":"A high-impact bespoke interactive YouTube Masthead with transcreation in three languages",
+        "bgImage":"Canon_CitySurfersYT.jpg",
+        "shortDesc":"",
+        "hex":"",
+        "services":["Production Management", "Digital Design", "Master banner development", "Video editing ", "QA"],
+        "keywords":"",
+        "description":"We were asked to design and build a high-impact bespoke interactive YouTube Masthead for English, German and French languages. We developed three creative routes to present options to Canon for creative sign off before building the master and worked closely with Google to ensure the design and technical specifications adhered to the DoubleClick adserver requirements.",
+        "Banners":true,
+        "DOOH":false,
+        "Videos":true,
+        "Web":false,
+        "High_volume":false,
+        "High_creative_impact":true,
+        "StandardBanners":false,
+        "DynamicBanners":false,
+        "ExpandableBanners":false,
+        "VideoBanners":true,
+        "CMS":false,
+        "previews":[
+          {
+            "type":"banner",
+            "size":"MPU",
+            "compatibility":["mobile"]
+          },
+          {
+            "type":"banner",
+            "size":"Leaderboard",
+            "compatibility":["desktop", "tablet"]
+          },
+          {
+            "type":"banner",
+            "size":"skyscraper",
+            "compatibility":["tablet", "desktop"]
+          }
+        ],
+        "section":[
+
+        ]
+      },
+      {
+        "id":"2",
+        "client":"Innocean",
+        "ref":"Innocean_HyundaiSantaFey",
+        "campaign_ref":"HyundaiSantaFey",
+        "campaign":"Hyundai - Santa Fe",
+        "tagline":"Digital design consultation and production of standard digital banners.",
+        "bgImage":"Innocean_HyundaiSantaFe.jpg",
+        "shortDesc":"",
+        "hex":"",
+        "services":["Production Management", "Digital Design", "Master banner development", "Video editing ", "QA"],
+        "keywords":"",
+        "description":"Innocean are Hyundai's dedicated creative agency who asked us to help develop their creative concept for digital banners and fulfill their online media bookings. We provided advise from a digital design and techinal standpoint during the concepting stage and once Innocean had handed over their final concept, we began meticulously re-touching and cropping images from their photoshoot of a cyclist to create the assets. We then developed the front-end code to ensure all banners fulfilled the specs on the media plan and that the animation worked seemlessly across a range of browsers and devices.",
+        "Banners":true,
+        "DOOH":false,
+        "Videos":true,
+        "Web":false,
+        "High_volume":false,
+        "High_creative_impact":true,
+        "StandardBanners":false,
+        "DynamicBanners":false,
+        "ExpandableBanners":false,
+        "VideoBanners":true,
+        "CMS":false,
+        "previews":[
+          {
+            "type":"banner",
+            "size":"MPU",
+            "compatibility":["mobile"]
+          },
+          {
+            "type":"banner",
+            "size":"Leaderboard",
+            "compatibility":["desktop", "tablet"]
+          },
+          {
+            "type":"banner",
+            "size":"skyscraper",
+            "compatibility":["tablet", "desktop"]
+          }
+        ],
+        "section":[
+
+        ]
+      },
+      {
+        "id":"3",
+        "client":"Lucky Generals",
+        "ref":"LuckyGeneral_AmazonEcho",
+        "campaign_ref":"AmazonEcho",
+        "campaign":"Amazon Echo",
+        "tagline":"Design and build of rich media banners, skin and online videos to help drive sales of the Amazon Echo product.",
+        "bgImage":"LG_AmazonEcho.jpg",
+        "shortDesc":"",
+        "hex":"",
+        "services":["Production Management", "Digital Design", "DoubleClick", "QA"],
+        "keywords":"",
+        "description":"Working in partnership with Lucky Generals, we were asked to design and build rich media digital banners and create the online videos to help drive sales of the Amazon Echo product and fulfil ad placements across various sites such as Spotify and Youtube. The designs were created with consideration to the brand guidelines and the rich media ads were delivered via the DoubleClick adserver after a thorough QA and approval process. ",
+        "Banners":true,
+        "DOOH":false,
+        "Videos":true,
+        "Web":false,
+        "High_volume":false,
+        "High_creative_impact":true,
+        "StandardBanners":false,
+        "DynamicBanners":false,
+        "ExpandableBanners":false,
+        "VideoBanners":true,
+        "CMS":false,
+        "previews":[
+          {
+            "type":"banner",
+            "size":"MPU",
+            "compatibility":["mobile"]
+          },
+          {
+            "type":"banner",
+            "size":"Leaderboard",
+            "compatibility":["desktop", "tablet"]
+          },
+          {
+            "type":"banner",
+            "size":"skyscraper",
+            "compatibility":["tablet", "desktop"]
+          }
+        ],
+        "section":[
+
+        ]
+      },
+      {
+        "id":"4",
+        "client":"BASF",
+        "ref":"basf_WeCreateChemistry",
+        "campaign_ref":"WeCreateChemistry",
+        "campaign":"We create chemistry",
+        "tagline":"High volume digital banner production",
+        "bgImage":"BASF_WCCBanners.jpg",
+        "shortDesc":"",
+        "hex":"",
+        "services":"",
+        "keywords":"",
+        "description":"Duis exercitation fugiat do laborum aliqua esse commodo cillum. Quis fugiat laborum sunt dolore exercitation est cupidatat sit eu reprehenderit nostrud tempor velit nostrud ullamco amet. In nulla officia commodo laborum amet sunt tempor. Deserunt reprehenderit anim enim in sint nisi qui est sint non anim laborum. Ea laborum elit eiusmod labore anim laborum tempor occaecat magna eiusmod culpa commodo dolore et aute.",
+        "Banners":true,
+        "DOOH":false,
+        "Videos":true,
+        "Web":false,
+        "High_volume":false,
+        "High_creative_impact":true,
+        "StandardBanners":false,
+        "DynamicBanners":false,
+        "ExpandableBanners":false,
+        "VideoBanners":true,
+        "CMS":false,
+        "previews":[
+          {
+            "type":"banner",
+            "size":"MPU",
+            "compatibility":["mobile"]
+          },
+          {
+            "type":"banner",
+            "size":"Leaderboard",
+            "compatibility":["desktop", "tablet"]
+          },
+          {
+            "type":"banner",
+            "size":"skyscraper",
+            "compatibility":["tablet", "desktop"]
+          }
+        ],
+        "section":[
+
+        ]
+      }
+    ],
+    "employees":[
+      {
+        "name":"Nick Chikore",
+        "phone":"01234567890",
+        "email":"sdhjgfsh@dsfgsdh.dg",
+        "title":"Lead Web Developer",
+        "fulltime":false,
+        "skills":["Mentoring", "Troubleshooting", "Delegation", "Web Development"]
+      },
+      {
+        "name":"Ben Brown",
+        "phone":"01234567890",
+        "email":"sdhjgfsh@dsfgsdh.dg",
+        "title":"Senior Digital Designer",
+        "fulltime":true,
+        "skills":["Attention to detail", "Industry experience", "Design concepts"]
+      },
+      {
+        "name":"Munjeet Mehmi",
+        "phone":"01234567890",
+        "email":"sdhjgfsh@dsfgsdh.dg",
+        "title":"Senior Project manager",
+        "fulltime":true,
+        "skills":["Communication", "Managing stakeholders", "Project management"]
+      },
+      {
+        "name":"Angela Moon",
+        "phone":"01234567890",
+        "email":"sdhjgfsh@dsfgsdh.dg",
+        "title":"Project Manager",
+        "fulltime":true,
+        "skills":["Managing stakeholders", "Communication", "Project management"]
+      }
+    ]
+  }

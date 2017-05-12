@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Wellcom Digital credentials - Case study</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script type="text/javascript" src="../js/lib/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/lib/dust-full.js"></script>
+    <script type="text/javascript" src="../js/lib/dust-helpers.js"></script>
+    </head>
+    <body class="landing dark">
+      <header class="header"></header>
+      <script type="text/x-template" id="myData">
+        <div class="page">
+          {#cases}
+            <div class="pageBg">
+              <img src="/images/digital/{bgImage}" alt="{client}">
+            </div>
+            <div class="container-fluid slide fullHeight">
+              <div class="intro row">
+                <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+                  <h1 class="display">{client}</h1>
+                  <h2 class="subhead">{campaign}</h2>
+                  <p class="copyAlt">{description}</p>
+                </div>
+              </div>
+            </div>
+            <div class="container-fluid slide fullHeight ">
+              <div class="description row">
+                <div class="overview col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+                  <h2><span class="highlight">Project</span> Preview</h2>
+                  <p class="copyAlt">{description}</p>
+                </div>
+              </div>
+            </div>
+            <div class="container-fluid slide fullHeight">
+              <div class="preview row">
+                <div>
+                  <div class="deviceImgPreview"></div>
+                  <div class="cta">
+                    <p><a href="../banners/BASF/we-create-chemistry/">View Campaign banners</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container-fluid slide fullHeight">
+              <div class="driver row">
+                  <div class="panel dark noBg col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+                    <h2>Contact us</h2>
+                    <p class="copyAlt">Do you want to grab your customer's attention with a high-impact creative campaign? Contact us now to find out how we can help.  </p>
+                    <div class="">
+                      <p><a href="../contact-us/">Contact us</a></p>
+                    </div>
+                  </div>
+                  <div class="panel light col-xs-12">
+                    <div class="">
+                      <p><a href="#">View more case studies</a></p>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          {/cases}
+        </div>
+      </script>
+      <div id="container"></div>
+      <div class="ctrls"></div>
+      <!--build:js js/scripts.min.js -->
+      <script src="../js/lib/bootstrap.min.js"></script>
+      <script src="../js/scripts.js"></script>
+      <script type="text/javascript">
+        function renderTmplts(){
+          $.getJSON('../js/data.json',function(data){
+            var tlcont = document.getElementById('myData').innerHTML;
+            var dataTemplate = dust.compile(tlcont, 'myTmpl');
+            dust.loadSource(dataTemplate);
+            dust.render('myTmpl', data, function(err, res){
+              document.getElementById('container').innerHTML = res;
+            });
+          });
+        }
+
+        function initCaseStudies(){
+          var imgSrc = $('.pageBg > img').attr('src');
+          var myImg = $('.pageBg > img');
+          var wheight = $(window).height();
+          var wwidth = $(window).width();
+
+          function setSlideBg(){
+            $(myImg).parent().css({'background-image': 'url('+imgSrc+')'});
+            $(myImg).parent().css('background-size', 'cover');
+            $(myImg).parent().css('background-repeat', 'no-repeat');
+            $(myImg).parent().css('background-repeat', 'none');
+            $(myImg).parent().css('position', 'fixed');
+            $('.pageBg').parent().css('background-repeat', 'none');
+            $('.pageBg').css('background-repeat', 'no-repeat');
+            $('.pageBg').css('height', wheight);
+            $('.pageBg').css('width', '100%');
+            $('.pageBg').css('background-position', '50% 0px');
+            $('.fullHeight > div').css('height', wheight);
+            $(myImg).remove();
+          }
+          setSlideBg();
+          $(window).resize(function(){
+            setSlideBg();
+          });
+        }
+
+        $(window).load(function(){
+          renderTmplts();
+          setTimeout(function(){
+            initCaseStudies();
+          }, 2000);
+
+        });
+
+
+
+      </script>
+      <!--endbuild-->
+  </body>
+</html>

@@ -1,0 +1,239 @@
+.highlight{
+  color:$orange1;
+}
+
+.cta {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  ul{
+    @include lists;
+    li{
+      margin:3em auto;
+      a {
+        @include anchors;
+        @include copy;
+        display: inline-block;
+        color:$white;
+        font-size: 1.5em;
+        text-transform:uppercase;
+        text-shadow:0 0 0 transparent;
+      }
+    }
+  }
+}
+
+.overview {
+  h2{
+    text-align: center;
+  }
+}
+
+.slides {
+  position: relative;
+  .row {
+    > div > div {
+      padding: 2em;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      text-align: center;
+      display: block;
+    }
+  }
+
+    .preview{
+      > div{
+        width: 100%;
+      }
+    }
+    .preview .cta{
+      width: 100%;
+      bottom: 5em;
+    }
+    .driver{
+      background:$black;
+      text-align: center;
+
+    }
+
+    .panel {
+      border-radius: 0px;
+      margin-bottom: 0px;
+      position:relative;
+      &.dark{
+        a {
+          color: white;
+        }
+      }
+      &.light{
+        a {
+          color: black;
+        }
+      }
+      &.bottom{
+        bottom: 0px;
+        position: absolute;
+      }
+    }
+
+  &.fullHeight {
+    position: relative;
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      @include thin-film;
+    }
+  }
+}
+
+.ctrls{
+  display: block;
+  z-index: 7;
+  position: absolute;
+  span.closeBtn {
+    width: 40px;
+    height: 40px;
+    display: block;
+    position: fixed;
+    top: 2em;
+    right: 2em;
+    cursor: pointer;
+
+  }
+  .closeBtn {
+    span {
+      width: 100%;
+      height: 2px;
+      background: white;
+      display: block;
+      position:absolute;
+      top: 18px;
+      &:first-of-type {
+         transform: rotate(45deg);
+      }
+
+      &:last-of-type {
+          transform: rotate(-45deg);
+      }
+
+    }
+    @media all and (max-width:768px){
+      transform:scale(0.75);
+    }
+    &:hover {
+        opacity:0.75;
+    }
+  }
+}
+
+.contact {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  &:before{
+    content:' ';
+    display:block;
+    width:100%;
+    height:100%;
+    background:url('../images/cu_img1.jpg') no-repeat;
+    background-position: center 0;
+    background-size:cover;
+    opacity: .65;
+  }
+  > div {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    z-index: 1;
+  }
+  .ctaWrapper {
+    overflow: hidden;
+    a{
+      display:inline-block;
+      margin:2em;
+      vertical-align: top;
+      transition:450ms all linear;
+      @media all and (max-width:768px) {
+        display: block;
+        text-align: left;
+        //margin: 1em;
+         span {
+          display:inline-block;
+          &.glyphicon{
+            font-size: 2em;
+          }
+          &.copyAlt {
+             margin-top: 0.25em;
+           }
+        }
+      }
+    }
+    span{
+      display:block;
+      margin:auto;
+      &.glyphicon {
+        font-size:3em;
+        vertical-align:top;
+        padding: 0;
+      }
+      &.copyAlt {
+      margin-top: 2em;
+      }
+    }
+  }
+}
+
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url(../images/preload/circle/128x128/Preloader_11.gif) center no-repeat $white;//#f98636;
+}
+
+//casestudy page
+#casestudy {
+  width: 100%;
+  background: $black;
+  position: fixed;
+  z-index: 6;
+  top: 0;
+  overflow: hidden;
+  .study{
+    display: none;
+    &.active{
+      display:block;
+    }
+  }
+}
+
+.pageBg {
+  #CitySurfersYT &{
+    background-image: url(/images/digital/Canon_CitySurfersYT.jpg);
+  }
+  #HyundaiSantaFey &{
+    background-image: url(/images/digital/Innocean_HyundaiSantaFe.jpg);
+
+  }
+  #WeCreateChemistry &{
+    background-image: url(/images/digital/BASF_WCCBanners.jpg);
+  }
+  #AmazonEcho &{
+    background-image: url(/images/digital/LG_AmazonEcho.jpg);
+
+  }
+}

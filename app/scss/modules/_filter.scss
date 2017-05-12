@@ -1,0 +1,146 @@
+.filterWrapper{
+  position: absolute;
+  width: 360px;
+  top: 0px;
+  left: auto;
+  right: -360px;
+  z-index: 2;
+  transition:450ms right linear;
+  &:before {
+    content: '';
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.75);
+    z-index: -1;
+    transform: translateX(100%);
+    transition: 350ms transform linear;
+    transition-delay:250ms;
+  }
+  .filter{
+    width: 100%;
+    padding: 1em;
+    background:#222;
+    max-width:360px;
+    transform: translateX(100%);
+    transition: 450ms transform linear;
+    h2 {
+        margin-top: 1em;
+    }
+    p{
+      font-size: 20px;
+      cursor:pointer;
+      &.trigger {
+        //padding: .5em 0 .5em 1.5em;
+        padding: .5em 0;
+        margin: 0;
+        &:before{
+          position: absolute;
+          left: 0px;
+          top: 16px;
+          font-size: 12px;
+        }
+      }
+    }
+    .filterOptions{
+      max-height:0;
+      overflow: hidden;
+      transition:all 450ms linear;
+      a{
+        @include copy;
+        color:$orange1;
+        font-size:18px !important;
+        margin-bottom:8px;
+        margin-top:8px;
+        padding: 0px;
+        margin-left: 2.2em;
+      }
+    }
+    .focused {
+      .filterOptions{
+        max-height:200px;
+        clear: both;
+      }
+    }
+
+    .selectOptionGroup{
+      > p span {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin: 2px 1em -2px 0;
+        background: transparent;
+        border: 2px solid;
+        border-radius: 1em;
+        color:$orange1;
+      }
+      > div{
+        max-height: 0;
+        overflow:hidden;
+        transition-delay:200ms;
+        transition:250ms all linear;
+      }
+
+      &.active{
+        > p span {
+          background: $orange1;
+        }
+        > div{
+          max-height: 500px;
+          > div:first-of-type .trigger {
+              padding-top: 1px;
+          }
+        }
+      }
+    }
+  }
+  &.show{
+    right:0;
+    &:before, .filter {
+      transform: translateX(0);
+    }
+
+  }
+}
+
+.filter-trigger {
+  cursor:pointer;
+  span{
+    i{
+      left :25%;
+      transition:450ms left linear;
+      //transition-delay:250ms;
+    }
+    &:first-of-type{
+      i{
+        left :85%;
+      }
+    }
+    &:last-of-type{
+      i{
+        left :55%;
+      }
+    }
+  }
+  &.on{
+    span{
+      i{
+        left :65%;
+      }
+      &:first-of-type{
+        i{
+          left :15%;
+        }
+      }
+      &:last-of-type{
+        i{
+          left :25%;
+        }
+      }
+    }
+
+  }
+}

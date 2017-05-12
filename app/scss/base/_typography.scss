@@ -1,0 +1,39 @@
+h1, h2, h3{
+  @include headings;
+}
+
+h3, label{
+  font-size:21px;
+  font-weight: 700;
+}
+
+p{
+  line-height: 1.5em;
+  margin: 1em auto;
+  font-weight: 300;
+}
+
+p,ul, ol, form{
+  @include copy;
+}
+a, button{
+  @include anchors;
+}
+.display{
+  @include headingOne;
+}
+.sectionHeading{
+  font-size:21px;
+  font-weight: 700;
+}
+.copyAlt{
+  font-family:$caseStudyCopy;
+  font-size:18px;
+  font-weight:100;
+}
+p.subhead{
+  font-size:18px ;
+}
+.glyphicon {
+    padding-right: 1em;
+}

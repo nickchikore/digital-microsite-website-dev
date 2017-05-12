@@ -1,0 +1,32 @@
+header {
+  width: 100%;
+  position: absolute;
+  max-height: 100px;
+  height: auto;
+  top: 3em;
+  z-index: 3;
+  .landing &{
+    top:0;
+    position: fixed;
+  }
+  .logo {
+    width: 200px;
+    height: 75px;
+    display: block;
+    margin: auto;
+  }
+  .logoLite{
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    margin: 2em;
+    transition:transform 500ms linear;
+    @media all and (max-width:768px){
+      //width: 50px;
+      transform:scale(0.75);
+    }
+    &:hover {
+        opacity:0.75;
+    }
+  }
+}

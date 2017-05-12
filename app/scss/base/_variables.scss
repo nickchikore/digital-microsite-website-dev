@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,700,900|Roboto+Slab:100');
+
+$font1: 'Raleway', sans-serif;
+$font2: 'Roboto Slab', serif;
+
+$headingFont: $font1;
+$copyFont: $font1;
+$caseStudyCopy: $font2;
+
+$black:#000;
+$white:#fff;
+
+$siteBg:$black;
+$fontColor:$white;
+$genericAnchorColor: $white;
+
+//$colors
+$orange1:orange;
+$orange2:orange;
+$orange3:orange;
+
+$black:#000000;
+
+$grey:grey;
+$blue:blue;
+$white:white;
+$purple:purple;
+$blue:navy;
+
+$headingFontSize:26px;
+$headingFontColor:$orange1;
+$headingFontWeight:bold;
+
+$copyFontSize:26px;
+$copyFontColor:$grey;
+$lightFontColor:$white;
+$darkFontColor:lighten($black, 10);
+$lightThemeBg:$white;
+$darkThemeBg:$black;
+
+//$headingFontLightColor: $lightFontColor;
+//$headingFontDarkColor: $darkFontColor;
+
+//$copyFontWeight:lighter;
+
+/*$linkTextColor:;
+$linkTextWeight:;
+
+$listItemFontSize:;
+$listItemFontColor:;
+$listItemFontWeight:;
+$numberedListItem:;
+$textboxPlaceholderColor:;
+$textboxBgColor:;
+*/
+
+
+//Section Specific Colors
+/*$pageBG:;
+$buttonBg:;
+$overlayBg:;*/
